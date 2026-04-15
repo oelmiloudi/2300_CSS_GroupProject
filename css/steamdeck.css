@@ -9,7 +9,7 @@ body {
   color: #e6edf3;
   line-height: 1.6;
   background-image: linear-gradient(rgba(10, 18, 30, 0.88), rgba(10, 18, 30, 0.9)),
-    url("steam-bg.jpg");
+    url("../photos/steam-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -112,7 +112,7 @@ main {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 30px;
-  background-image: url("steamdeck-hero.jpg");
+  background-image: url("../photos/steamdeck-hero.jpg");
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(102, 192, 244, 0.35);
