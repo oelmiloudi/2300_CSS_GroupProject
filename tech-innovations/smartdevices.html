@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Innovations | Apple Watch</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #e6edf3;
+      line-height: 1.6;
+      background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.94)),
+        url("../photo/applewatch-bg.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: #0a0a0a;
+    }
+
+    header {
+      background: #0d1b2a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 2px solid #e04040;
+    }
+
+    .logo-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: #c7d5e0;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e04040;
+    }
+
+    main {
+      width: 88%;
+      max-width: 1200px;
+      margin: 35px auto;
+    }
+
+    .card {
+      background: rgba(24, 24, 28, 0.94);
+      border: 1px solid rgba(224, 64, 64, 0.2);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+    }
+
+    .card h2 {
+      color: #e04040;
+      margin-bottom: 16px;
+      font-size: 1.9rem;
+    }
+
+    .card p {
+      margin-bottom: 14px;
+      color: #d8e2ea;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      background-image: url("../background/applewatch-hero.jpg");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(224, 64, 64, 0.3);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.5));
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 55px 40px;
+      max-width: 750px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.4rem;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #dbe8f3;
+    }
+
+    .product-image {
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    .product-image img {
+      max-width: 700px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .version-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .version-box {
+      flex: 1 1 280px;
+      background: linear-gradient(180deg, rgba(38, 38, 42, 0.95), rgba(18, 18, 22, 0.95));
+      border: 1px solid rgba(224, 64, 64, 0.2);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .version-box h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .version-box p {
+      color: #cdd9e1;
+    }
+
+    .author-note {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      background: #0d1b2a;
+      color: white;
+      padding: 18px;
+      margin-top: 35px;
+      border-top: 2px solid #e04040;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero {
+        min-height: 360px;
+      }
+
+      .hero-text {
+        padding: 35px 24px;
+      }
+
+      .hero-text h2 {
+        font-size: 1.9rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 10px;
+      }
+
+      .logo {
+        width: 55px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="../banner/applewatch-logo.png" alt="Apple Logo" class="logo" />
+      <div>
+        <h1>Apple Watch</h1>
+        <p class="tagline">The smart wearable redefining health and connectivity</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="steamdeck.html">Steam Deck</a>
+      <a href="smartdevices.html">Apple Watch</a>
+      <a href="Xbox.html">Xbox Series X</a>
+      <a href="Ps5.html">PlayStation 5</a>
+      <a href="graphicscards.html">Graphics Cards</a>
+    </nav>
+  </header>
+
+  <p class="author-note">Authored by Omar El Miloudi on April 01, 2026</p>
+
+  <div class="product-image">
+    <img src="../white/transparent/applewatch-design.jpg" alt="Apple Watch Design" />
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h2>More Than a Watch. A Health and Lifestyle Platform.</h2>
+        <p>
+          The Apple Watch is a wrist-worn smart device created by Apple that goes far beyond
+          telling the time. It integrates advanced health sensors, real-time notifications,
+          fitness tracking, communication tools, and a growing ecosystem of third-party
+          applications into a compact wearable form factor. Since its introduction in 2015,
+          it has evolved into one of the most capable and widely adopted wearable computing
+          devices in the world.
+        </p>
+      </div>
+    </section>
+
+    <section class="intro card">
+      <h2>What Makes the Apple Watch Innovative?</h2>
+      <p>
+        The Apple Watch stands out because it merges medical-grade health monitoring with
+        everyday smart device convenience. It is not simply a companion to the iPhone. It
+        functions as an independent health tracker, a communication hub, a fitness coach,
+        a contactless payment terminal, and a safety tool capable of detecting falls, car
+        crashes, and irregular heart rhythms.
+      </p>
+      <p>
+        Apple has consistently pushed the boundaries of what a wearable can do by adding
+        sensors like the blood oxygen monitor, electrical heart rate sensor for ECG readings,
+        and a skin temperature sensor. These features move the Apple Watch beyond consumer
+        electronics and into the territory of personal health technology, making it relevant
+        to both everyday users and those managing chronic conditions.
+      </p>
+    </section>
+
+    <div class="product-image">
+      <img src="../photo/applewatch-lineup.jpg" alt="Apple Watch Lineup" />
+    </div>
+
+    <section class="versions card">
+      <h2>Apple Watch Models</h2>
+
+      <div class="version-grid">
+        <article class="version-box">
+          <h3>Apple Watch SE</h3>
+          <p>
+            The SE model is the entry-level Apple Watch designed for users who want core
+            smartwatch features like fitness tracking, heart rate monitoring, crash detection,
+            and notifications without the premium price. It uses the same chip architecture as
+            higher-end models but omits advanced sensors like the blood oxygen and ECG monitors.
+          </p>
+        </article>
+
+        <article class="version-box">
+          <h3>Apple Watch Series 10</h3>
+          <p>
+            The mainline Series model represents the standard premium experience. It includes
+            the full sensor suite with ECG, blood oxygen monitoring, skin temperature sensing,
+            an always-on Retina display, and advanced workout detection. It balances capability,
+            size, and battery life for daily all-day use.
+          </p>
+        </article>
+
+        <article class="version-box">
+          <h3>Apple Watch Ultra 2</h3>
+          <p>
+            The Ultra is built for extreme environments and endurance activities. It features
+            a larger titanium case, a brighter display, a precision dual-frequency GPS, a depth
+            gauge, a siren for emergencies, and significantly longer battery life. It targets
+            divers, hikers, marathon runners, and outdoor professionals.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="hardware card">
+      <h2>Hardware Deep Dive</h2>
+      <p>
+        At the heart of the Apple Watch is Apple's custom System in Package, or SiP, which
+        combines the processor, GPU, wireless radios, and supporting components into a single
+        compact module. The latest models use the S9 SiP, which features a dual-core CPU and
+        a four-core Neural Engine capable of processing machine learning tasks directly on the
+        device. This enables features like on-device Siri processing, gesture recognition
+        through the Double Tap feature, and real-time health data analysis without relying on
+        the paired iPhone.
+      </p>
+      <p>
+        The sensor array is one of the most advanced in any consumer wearable. It includes a
+        third-generation optical heart rate sensor, an electrical heart rate sensor for ECG, a
+        blood oxygen sensor using red and infrared LEDs, a skin temperature sensor, an ambient
+        light sensor, a barometric altimeter, a compass, a high-g accelerometer, and a
+        high-dynamic-range gyroscope. Together, these sensors allow the device to monitor
+        cardiac health, detect falls and vehicle impacts, track elevation changes, measure
+        workout intensity, and estimate physiological metrics like VO2 max and respiratory rate.
+      </p>
+      <p>
+        The display technology varies by model. The standard Series uses an LTPO OLED
+        always-on Retina display that adjusts its refresh rate dynamically to conserve power.
+        The Ultra model uses a brighter version of this display rated at up to 3000 nits, making
+        it readable in direct sunlight. All current models support haptic feedback through the
+        Taptic Engine, which provides precise physical responses for notifications, navigation
+        directions, and interaction confirmations.
+      </p>
+      <p>
+        Connectivity includes Wi-Fi, Bluetooth 5.3, and optional LTE cellular connectivity.
+        Cellular models allow the watch to make calls, send messages, stream music, and use
+        apps independently without a nearby iPhone. Ultra Wideband support enables precise
+        device location for features like Precision Finding with AirTags.
+      </p>
+    </section>
+
+    <section class="software card">
+      <h2>Software and Operating System Breakdown</h2>
+      <p>
+        The Apple Watch runs watchOS, a purpose-built operating system designed specifically
+        for wrist-based interaction. watchOS provides the interface for watch faces, app
+        navigation, notifications, health dashboards, fitness rings, and Siri integration.
+        It is tightly integrated with iOS on the paired iPhone, allowing seamless handoff of
+        tasks, shared health data through Apple Health, and synchronised settings.
+      </p>
+      <p>
+        One of the key software features is the Activity Rings system, which tracks three daily
+        metrics: Move (active calories burned), Exercise (minutes of brisk activity), and Stand
+        (hours where the user stood and moved for at least one minute). This simple visual
+        framework has become one of the most effective behaviour-change tools in consumer
+        health technology, motivating millions of users to maintain daily physical activity.
+      </p>
+      <p>
+        Health monitoring extends well beyond fitness. The Apple Watch can record a single-lead
+        ECG and flag irregular heart rhythms such as atrial fibrillation. It can monitor blood
+        oxygen saturation in the background, track menstrual cycles using skin temperature
+        data, log sleep stages and duration, and remind users to take medications. These
+        features position the device as a continuous health companion rather than just a
+        workout tracker.
+      </p>
+      <p>
+        Safety features are deeply embedded in the software. Fall detection uses accelerometer
+        and gyroscope data to identify hard falls and automatically contact emergency services
+        if the user does not respond within a set time. Crash detection works similarly for
+        vehicle collisions. Emergency SOS allows users to contact local authorities directly
+        from their wrist, and the Ultra model can send satellite-based emergency messages in
+        areas without cellular coverage.
+      </p>
+      <p>
+        The App Store on watchOS supports thousands of third-party applications. Developers can
+        build standalone watch apps that function without an iPhone, enabling use cases like
+        independent navigation, music streaming, workout coaching, smart home control, and
+        two-factor authentication. watchOS also supports custom watch faces and complications,
+        allowing users to personalise the information displayed at a glance.
+      </p>
+    </section>
+
+    <section class="innovation card">
+      <h2>Why It Matters for the Future of Technology</h2>
+      <p>
+        The Apple Watch is significant because it demonstrates that wearable devices can move
+        beyond novelty accessories and become essential tools for health, safety, and daily
+        productivity. It has normalised the idea of continuous biometric monitoring for
+        mainstream consumers and has contributed to a growing body of medical research through
+        large-scale health studies using Watch sensor data.
+      </p>
+      <p>
+        In a broader technology context, the Apple Watch reflects the trend toward ambient
+        computing, where devices become smaller, more personal, and more integrated into the
+        body. The shift from phone-dependent accessory to independent wrist computer mirrors
+        the wider movement in technology toward distributed, always-available computing that
+        adapts to the user rather than requiring the user to adapt to the device. As sensor
+        technology continues to advance, the Apple Watch is positioned to expand further into
+        medical diagnostics, preventive health, and context-aware assistance.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Tech Innovations | Apple Watch Page</p>
+  </footer>
+</body>
+</html>

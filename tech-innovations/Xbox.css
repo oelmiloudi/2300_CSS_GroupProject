@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fc;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #0d1b2a;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 2px solid #107c10;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 6px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.tagline {
+  font-size: 1.05rem;
+  color: #c7d5e0;
+}
+
+h1 {
+font-family:"Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+
+
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  display: inline-block; /* needed for animation */
+  transition: transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #66c2ff;
+  animation: wiggle 0.4s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+main {
+  width: 85%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+section {
+  margin-bottom: 35px;
+}
+
+.hero,
+.intro,
+.future {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hero h2,
+.intro h2,
+.future h2 {
+  color: #0d1b2a;
+  margin-bottom: 15px;
+}
+
+
+h3 {
+  color: #1b4965;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  background: #0d1b2a;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
