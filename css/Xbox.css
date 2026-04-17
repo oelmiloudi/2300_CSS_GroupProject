@@ -4,19 +4,26 @@
   box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f8fc;
-  color: #222;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #d8eaf5;
+  color: #111;
+  line-height: 1.7;
 }
 
+/* ── HEADER ── */
 header {
-  background: #0d1b2a;
+  background: linear-gradient(135deg, #0d1b2a 0%, #0e2a10 100%);
   color: white;
   text-align: center;
-  padding: 30px 20px;
-  border-bottom: 2px solid #107c10;
+  padding: 32px 20px;
+  border-bottom: 3px solid #107c10;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 .logo-area {
@@ -24,101 +31,139 @@ header {
   justify-content: center;
   align-items: center;
   gap: 18px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 
 .logo {
   width: 90px;
   height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(16, 124, 16, 0.3));
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 14px rgba(16, 124, 16, 0.7));
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 6px;
   font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
 }
 
 .tagline {
   font-size: 1.05rem;
-  color: #c7d5e0;
+  color: #8ecf8e;
 }
 
-h1 {
-font-family:"Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-
-
-.tagline {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-nav {
-  margin-top: 15px;
-}
+nav { margin-top: 16px; }
 
 nav a {
   color: white;
   text-decoration: none;
   margin: 0 12px;
-  font-weight: bold;
-  display: inline-block; /* needed for animation */
-  transition: transform 0.2s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 4px;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3dba3d;
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 nav a:hover {
-  color: #66c2ff;
+  color: #3dba3d;
   animation: wiggle 0.4s ease-in-out;
 }
 
+nav a:hover::after { width: 100%; }
+
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(4deg); }
-  50% { transform: rotate(-4deg); }
-  75% { transform: rotate(2deg); }
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(4deg); }
+  50%  { transform: rotate(-4deg); }
+  75%  { transform: rotate(2deg); }
   100% { transform: rotate(0deg); }
 }
 
-main {
-  width: 85%;
-  max-width: 1100px;
-  margin: 30px auto;
-}
-
-section {
-  margin-bottom: 35px;
-}
-
-.hero,
-.intro,
-.future {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.hero h2,
-.intro h2,
-.future h2 {
+/* ── BODY CONTENT ── */
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.2rem;
+  margin: 24px 0 10px;
   color: #0d1b2a;
-  margin-bottom: 15px;
+  text-align: center;
 }
-
 
 h3 {
-  color: #1b4965;
-  margin-bottom: 10px;
+  color: #0a5c0a;
+  margin: 18px 0 8px;
+  font-size: 1.15rem;
 }
 
+p {
+  max-width: 860px;
+  margin: 0 auto 14px;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* ── TABLE ── */
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+table th, table td {
+  padding: 12px 18px;
+  border: 2px solid navy;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+table tr:hover td { background-color: #b8d8f8; }
+
+table th { background-color: #cce0ff; font-weight: 700; }
+
+/* ── CENTER IMAGES ── */
+center img {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+center img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px rgba(16, 124, 16, 0.25);
+}
+
+/* ── FOOTER ── */
 footer {
   text-align: center;
-  background: #0d1b2a;
-  color: white;
-  padding: 15px;
-  margin-top: 30px;
+  background: linear-gradient(135deg, #0d1b2a, #0e2a10);
+  color: #8ecf8e;
+  padding: 18px;
+  margin-top: 36px;
+  font-size: 0.9rem;
+  border-top: 2px solid #107c10;
 }
